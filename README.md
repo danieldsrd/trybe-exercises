@@ -1,1 +1,1 @@
-# trybe-exercises
+Repositorio pessoal para compartilhar meus codigos e testes, serão salvos principalmente trabalhos feitos durante o curso da Trybe, tentarei trazer codigos antigos que já fiz no decorrer da vida acadêmica.
