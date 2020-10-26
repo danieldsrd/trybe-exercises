@@ -1,4 +1,5 @@
-let salarioBruto =3000;
+let salarioBruto =500;
+
 
 if (salarioBruto <= 0) {
     console.log ("Salario invalido!");
@@ -28,6 +29,7 @@ if (salarioBruto <= 0) {
         console.log("Seu salario liquido é: " + salarioLiquido)
     }
 }
+
 
 
 
