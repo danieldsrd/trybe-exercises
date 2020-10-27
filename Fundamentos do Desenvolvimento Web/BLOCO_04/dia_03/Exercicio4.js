@@ -1,9 +1,9 @@
-let n = 11;
+let n = 3;
 let sum = "";
 let asterisco = "*";
 let espaco = " ";
 
-if ((n > 1) && (n % 2 == 0)) {
+if ((n > 2) && (n % 2 == 0)) {
     i = 2;
     for (i; i <= n; i +=2) {
         for (let j=0; j < n; j +=1) {
