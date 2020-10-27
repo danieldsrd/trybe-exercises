@@ -1,12 +1,14 @@
-let n = 21;
+let n = 4;
 let sum = " ";
 let asterisco = "*";
 let espaco = " ";
 
 if (n > 1) {
-    for (i=0; i < n; i +=2) {
+    for (i=0; i <= n; i +=2) {
         for (let j=0; j < n; j +=1) {
             if ((j >= ((n-i-1)/2)) && (j <= ((n+i-1)/2)))  {
+                sum += asterisco;
+            } else if ( n == i) {   
                 sum += asterisco;           
             } else {
                 sum += espaco;                
