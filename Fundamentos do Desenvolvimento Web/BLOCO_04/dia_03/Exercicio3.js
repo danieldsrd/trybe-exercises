@@ -1,5 +1,5 @@
 let n = 20;
-let sum = " ";
+let sum = "";
 let asterisco = "*";
 let espaco = " ";
 
@@ -13,7 +13,7 @@ if (n > 1) {
             }            
         }
         console.log(sum);
-        sum = " ";
+        sum = "";
     }
 } else {
     console.log("Valor inválido!");

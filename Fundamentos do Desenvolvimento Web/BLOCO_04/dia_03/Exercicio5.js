@@ -1,5 +1,5 @@
-let n = 21;
-let sum = " ";
+let n = 11;
+let sum = "";
 let asterisco = "*";
 let espaco = " ";
 
@@ -15,7 +15,7 @@ if ((n % 2) != 0) {
             }          
         }   
         console.log(sum);
-        sum = " ";
+        sum = "";
     }
 } else {
     console.log("Valor inválido!");
