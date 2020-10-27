@@ -13,4 +13,3 @@ if (n > 1) {
     console.log("Valor inválido!");
 }
 
-console.log(sum);
