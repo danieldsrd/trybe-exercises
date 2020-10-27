@@ -1,9 +1,9 @@
-let n = 49;
+let n = 19;
 let sum = " ";
 let asterisco = "*";
 let espaco = " ";
 
-if (n > 1) {
+if ((n % 2) != 0) {
     for (i=0; i < n; i +=2) {
         for (let j=0; j < n; j +=1) {
             if ( (j == ((n-i-1)/2)) || (j == ((n+i-1)/2)) )  {

@@ -1,4 +1,4 @@
-let n = 11;
+let n = 21;
 let sum = " ";
 let asterisco = "*";
 let espaco = " ";
