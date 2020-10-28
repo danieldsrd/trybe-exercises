@@ -1,17 +1,15 @@
-let palavra = "arara";
-let palindromo = "";
-
 function verificaPalindrome(palavra) {
+    palavra = palavra.toLowerCase();    
+    let palindromo = "";
     for (let i = palavra.length - 1; i >= 0; i--) {
         palindromo += palavra[i]        
     }    
     if (palindromo === palavra) {
-        console.log('true');
+        return true;
     } else {
-        console.log('false');
+        return false;
     }
 }
-
-verificaPalindrome(palavra)
+console.log(verificaPalindrome("barata"));
 
 
