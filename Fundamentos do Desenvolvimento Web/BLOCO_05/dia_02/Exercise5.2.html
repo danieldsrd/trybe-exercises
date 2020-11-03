@@ -58,6 +58,7 @@
   <body>
     <script>
         let h1Passo1 = document.createElement('h1');
+        h1Passo1.className = 'title'
         document.body.appendChild(h1Passo1);
 
         let divPasso2 = document.createElement('div');
@@ -92,19 +93,30 @@
             listaNumeros[index] = index;
         }        
        
-        for (index = 1; index < listaNumeros.length; index +=1) {
+        for (let index = 1; index < listaNumeros.length; index +=1) {
             let valoresLista = document.createElement('li');
-
             valoresLista.innerHTML = listaNumeros[index];
-            lista.appendChild(valoresLista)
+            lista.appendChild(valoresLista);
         }
         divPasso6.appendChild(lista);
 
 
         for (let j = 0; j < 3; j +=1) {
             let h3 = document.createElement('h3');
+            h3.className = 'description'
             divPasso2.appendChild(h3)
         }
+
+        divPasso2.removeChild(divPasso5);
+
+        document.querySelector('.right-content').style.marginRight = 'auto';
+
+        document.querySelector('.center-content').style.background = 'green'
+
+      
+
+       
+
       
 
       
