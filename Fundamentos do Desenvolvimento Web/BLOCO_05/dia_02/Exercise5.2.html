@@ -57,7 +57,57 @@
   </head>
   <body>
     <script>
-      // COLOQUE SEU CÓDIGO AQUI
+        let h1Passo1 = document.createElement('h1');
+        document.body.appendChild(h1Passo1);
+
+        let divPasso2 = document.createElement('div');
+        divPasso2.className = 'main-content';
+        document.body.appendChild(divPasso2);
+
+        let divPasso3 = document.createElement('div');
+        divPasso3.className = 'center-content';
+        divPasso2.appendChild(divPasso3);
+
+        let texto = document.createElement('p');
+        texto.innerHTML = 'DANIEL DE SOUSA RODRIGUES';
+        divPasso3.appendChild(texto)
+
+        let divPasso5 = document.createElement('div');
+        divPasso5.className = 'left-content';
+        divPasso2.appendChild(divPasso5);
+
+        let divPasso6 = document.createElement('div');
+        divPasso6.className = 'right-content';
+        divPasso2.appendChild(divPasso6);
+        
+        let imagem = document.createElement('img');
+        imagem.src = 'https://picsum.photos/200';
+        imagem.className = 'small-image';
+        divPasso5.appendChild(imagem);
+
+        let listaNumeros = [];
+        let lista = document.createElement('ul');
+        lista.setAttribute('id','Lista')       
+        for (let index = 1; index <= 10; index +=1){
+            listaNumeros[index] = index;
+        }        
+       
+        for (index = 1; index < listaNumeros.length; index +=1) {
+            let valoresLista = document.createElement('li');
+
+            valoresLista.innerHTML = listaNumeros[index];
+            lista.appendChild(valoresLista)
+        }
+        divPasso6.appendChild(lista);
+
+
+        for (let j = 0; j < 3; j +=1) {
+            let h3 = document.createElement('h3');
+            divPasso2.appendChild(h3)
+        }
+      
+
+      
     </script>
   </body>
 </html>
