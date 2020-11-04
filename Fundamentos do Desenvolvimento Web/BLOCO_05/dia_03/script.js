@@ -54,8 +54,7 @@ createButton("FERIADOS");
 
 // EXERCICIO 3
 
-function changeColorDay () {
-    let button = document.querySelector('#btn-holiday');
+function changeColorDay () {    
     let holiday = document.querySelectorAll('.holiday');          
     for (let index = 0; index < holiday.length; index +=1) {  
         if (holiday[index].style.background === 'blue') {
@@ -63,8 +62,38 @@ function changeColorDay () {
         } else        
         holiday[index].style.background = 'blue';          
     } 
-    button.addEventListener('click', changeColorDay);   
+       
 }
 let button = document.querySelector('#btn-holiday');
 button.addEventListener('click', changeColorDay); 
 
+//EXERCICIO 4
+
+function fridayButton (string) {
+    let button = document.createElement('button');
+    button.innerHTML = string; 
+    button.id = 'btn-friday';
+    let divMother = document.querySelector('.buttons-container');
+    divMother.appendChild(button);
+}
+fridayButton("SEXTA-FEIRA");
+
+// EXERCICIO 5
+
+let friday = document.querySelectorAll('.friday');
+let fridayArray = [];
+for (let index = 0; index < friday.length; index +=1) { 
+    fridayArray[index] = friday[index].innerHTML; 
+};
+console.log(fridayArray)
+function changeTextFriday () {           
+    for (let index = 0; index < friday.length; index +=1) {         
+        if (friday[index].innerHTML === 'SEXTOU!') {
+            friday[index].innerHTML = fridayArray[index]; 
+        } else        
+        friday[index].innerHTML = 'SEXTOU!';          
+    } 
+       
+}
+let button2 = document.querySelector('#btn-friday');
+button2.addEventListener('click', changeTextFriday); 
