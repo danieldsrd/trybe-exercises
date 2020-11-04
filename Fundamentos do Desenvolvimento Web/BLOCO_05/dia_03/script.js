@@ -29,17 +29,17 @@ function createDaysOfTheWeek() {
         const dayListItem = document.createElement('li');
         dayListItem.innerHTML = daysList;
         dayListItem.className = 'day';
-        if (dayListItem.innerHTML.includes('24') || dayListItem.innerHTML.includes('31')) {
-            dayListItem.className = 'day holiday';
+        if (dayListItem.innerHTML.includes('24') || dayListItem.innerHTML.includes('31') || dayListItem.innerHTML.includes('25')) {
+            dayListItem.classList.add('holiday')
         }
-        if (dayListItem.innerHTML === '4' || dayListItem.innerHTML.includes('11') || dayListItem.innerHTML.includes('18')) {
-            dayListItem.className = 'day friday';
-        }
-        if (dayListItem.innerHTML.includes('25')) {
-            dayListItem.className = 'day friday holiday';
-        }
+        if (dayListItem.innerHTML === '4' || dayListItem.innerHTML.includes('11') || dayListItem.innerHTML.includes('18') || dayListItem.innerHTML.includes('25')) {
+            dayListItem.classList.add('friday');
+        };         
     
         ulList.appendChild(dayListItem);
       };
   };
 createDays();
+
+// EXERCICIO 2
+
