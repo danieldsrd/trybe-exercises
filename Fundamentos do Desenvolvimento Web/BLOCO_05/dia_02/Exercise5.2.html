@@ -95,8 +95,7 @@
        
         for (let index = 0; index < listaNumeros.length; index +=1) {
             let valoresLista = document.createElement('li');
-            valoresLista.innerHTML = listaNumeros[index];
-            valoresLista.className = 'list-items'
+            valoresLista.innerHTML = listaNumeros[index];            
             lista.appendChild(valoresLista);
 
         }
@@ -116,10 +115,11 @@
         document.querySelector('.center-content').style.background = 'green'        
        
 
-        let listItems = document.querySelectorAll('.list-items')
+        let listItems = document.querySelectorAll('li')
+        
 
         for (index = 0; index < listItems.length; index +=1) {
-          let removeElement = listItems[index];
+          let removeElement = listItems[index];          
 
           if (removeElement.innerHTML.includes('9') || removeElement.innerHTML.includes('10')) {
             lista.removeChild(removeElement); 
