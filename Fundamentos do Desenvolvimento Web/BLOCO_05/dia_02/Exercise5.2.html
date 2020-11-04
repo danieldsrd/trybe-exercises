@@ -89,14 +89,16 @@
         let listaNumeros = [];
         let lista = document.createElement('ul');
         lista.setAttribute('id','Lista')       
-        for (let index = 1; index <= 10; index +=1){
-            listaNumeros[index] = index;
+        for (let index = 0; index < 10; index +=1){
+            listaNumeros[index] = index+1;
         }        
        
-        for (let index = 1; index < listaNumeros.length; index +=1) {
+        for (let index = 0; index < listaNumeros.length; index +=1) {
             let valoresLista = document.createElement('li');
             valoresLista.innerHTML = listaNumeros[index];
+            valoresLista.className = 'list-items'
             lista.appendChild(valoresLista);
+
         }
         divPasso6.appendChild(lista);
 
@@ -112,6 +114,21 @@
         document.querySelector('.right-content').style.marginRight = 'auto';
 
         document.querySelector('.center-content').style.background = 'green'
+        
+        console.log(listaNumeros)
+
+        let listItems = document.querySelectorAll('.list-items')
+
+        for (index = 0; index < listItems.length; index +=1) {
+          let removeElement = listItems[index];
+
+          if (removeElement.innerHTML.includes('9') || removeElement.innerHTML.includes('10')) {
+            lista.removeChild(removeElement); 
+          }
+        }
+
+
+        
 
       
 
