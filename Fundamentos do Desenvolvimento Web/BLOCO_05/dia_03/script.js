@@ -51,3 +51,20 @@ function createButton (string) {
     divMother.appendChild(button);
 }
 createButton("FERIADOS");
+
+// EXERCICIO 3
+
+function changeColorDay () {
+    let button = document.querySelector('#btn-holiday');
+    let holiday = document.querySelectorAll('.holiday');          
+    for (let index = 0; index < holiday.length; index +=1) {  
+        if (holiday[index].style.background === 'blue') {
+            holiday[index].style.background = 'rgb(238,238,238)'; 
+        } else        
+        holiday[index].style.background = 'blue';          
+    } 
+    button.addEventListener('click', changeColorDay);   
+}
+let button = document.querySelector('#btn-holiday');
+button.addEventListener('click', changeColorDay); 
+
