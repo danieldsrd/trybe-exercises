@@ -123,6 +123,7 @@ function myTasks (string) {
 
 myTasks("Cozinhar!");
 
+
 // EXERCICIO 8
 
 function createDiv (string) {
@@ -178,8 +179,11 @@ function addCompromisso() {
 let button3 = document.querySelector('#btn-add');
 button3.addEventListener('click', addCompromisso);
 
+
+// CODIGO BASEADO NO CODIGO DO SITE https://qastack.com.br/programming/905222/enter-key-press-event-in-javascript
+
 let node = document.querySelector('#task-input');
-node.addEventListener('keyup', function(event) {
+node.addEventListener('keydown', function(event) {
     let txtName = document.getElementById('task-input').value;
     let ilAdd = document.createElement('li');
     let ulAdd = document.querySelector('.task-list');    
@@ -190,4 +194,5 @@ node.addEventListener('keyup', function(event) {
         } else {
             ulAdd.appendChild(ilAdd);
         }
-}});
+    }
+});
