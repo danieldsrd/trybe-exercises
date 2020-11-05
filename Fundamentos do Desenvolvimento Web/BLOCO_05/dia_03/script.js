@@ -57,10 +57,10 @@ createButton("FERIADOS");
 function changeColorDay () {    
     let holiday = document.querySelectorAll('.holiday');          
     for (let index = 0; index < holiday.length; index +=1) {  
-        if (holiday[index].style.background === 'blue') {
+        if (holiday[index].style.background === 'black') {
             holiday[index].style.background = 'rgb(238,238,238)'; 
         } else        
-        holiday[index].style.background = 'blue';          
+        holiday[index].style.background = 'black';          
     } 
        
 }
@@ -85,15 +85,76 @@ let fridayArray = [];
 for (let index = 0; index < friday.length; index +=1) { 
     fridayArray[index] = friday[index].innerHTML; 
 };
-console.log(fridayArray)
 function changeTextFriday () {           
     for (let index = 0; index < friday.length; index +=1) {         
         if (friday[index].innerHTML === 'SEXTOU!') {
             friday[index].innerHTML = fridayArray[index]; 
         } else        
         friday[index].innerHTML = 'SEXTOU!';          
-    } 
-       
+    }        
 }
 let button2 = document.querySelector('#btn-friday');
 button2.addEventListener('click', changeTextFriday); 
+
+// EXERCICIO 6
+
+const ulDays = document.querySelector('#days');
+
+function aumentaFonte(ulDays) {
+    ulDays.target.style.fontSize = '35px';
+}
+
+function diminuiFonte(ulDays) {
+    ulDays.target.style.fontSize = '20px';
+}
+
+ulDays.addEventListener('mousemove', aumentaFonte);
+ulDays.addEventListener('mouseout', diminuiFonte);
+
+
+// EXERCICIO 7
+
+function myTasks (string) {
+    let myTaskSpan = document.createElement('span');
+    myTaskSpan.innerHTML = string;
+    let divTasks = document.querySelector('.my-tasks');
+    divTasks.appendChild(myTaskSpan);
+}
+
+myTasks("Cozinhar!");
+
+// EXERCICIO 8
+
+function createDiv (string) {
+    let divNova = document.createElement('div');
+    divNova.className = 'task';
+    divNova.style.background = string;
+    let divMother = document.querySelector('.my-tasks');
+    divMother.appendChild(divNova);
+}
+createDiv('red');
+
+// EXERCICIO 9
+let divColor = document.querySelector('.task') 
+
+function eventClick () {       
+    if (divColor.classList.contains('selected')) {
+        divColor.classList.remove('selected');             
+    } else {
+        divColor.classList.add('selected');        
+    }
+
+}
+divColor.addEventListener('click', eventClick);
+
+// EXERCICIO 10
+const ulDaysColor = document.querySelector('#days');
+
+function changeColorDayTask (event) {    
+    if (event.target.style.color == document.querySelector('.selected').style.background) {
+        event.target.style.color = 'rgb(119,119,119)'
+    } else {
+        event.target.style.color = document.querySelector('.selected').style.background;
+    }
+} 
+ulDaysColor.addEventListener('click', changeColorDayTask);
