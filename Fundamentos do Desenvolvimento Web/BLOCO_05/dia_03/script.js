@@ -177,3 +177,17 @@ function addCompromisso() {
 }
 let button3 = document.querySelector('#btn-add');
 button3.addEventListener('click', addCompromisso);
+
+let node = document.querySelector('#task-input');
+node.addEventListener('keyup', function(event) {
+    let txtName = document.getElementById('task-input').value;
+    let ilAdd = document.createElement('li');
+    let ulAdd = document.querySelector('.task-list');    
+    ilAdd.innerHTML = txtName;    
+    if (event.key === 'Enter') {        
+        if (ilAdd.innerHTML == '') {
+            alert('Espaço vazio! Erro ao adcionar!')
+        } else {
+            ulAdd.appendChild(ilAdd);
+        }
+}});
