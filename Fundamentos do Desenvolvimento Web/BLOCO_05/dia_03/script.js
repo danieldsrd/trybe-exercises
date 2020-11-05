@@ -134,6 +134,8 @@ function createDiv (string) {
 }
 createDiv('red');
 
+
+
 // EXERCICIO 9
 let divColor = document.querySelector('.task') 
 
@@ -158,3 +160,20 @@ function changeColorDayTask (event) {
     }
 } 
 ulDaysColor.addEventListener('click', changeColorDayTask);
+
+
+// EXERCICIO BONUS
+
+function addCompromisso() {
+    let txtName = document.getElementById('task-input').value;
+    let ilAdd = document.createElement('li');    
+    let ulAdd = document.querySelector('.task-list');
+    ilAdd.innerHTML = txtName;    
+    if (ilAdd.innerHTML == '') {
+        alert('Espaço vazio! Erro ao adcionar!')
+    } else {
+        ulAdd.appendChild(ilAdd);
+    }     
+}
+let button3 = document.querySelector('#btn-add');
+button3.addEventListener('click', addCompromisso);
