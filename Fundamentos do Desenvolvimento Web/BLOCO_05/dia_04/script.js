@@ -8,6 +8,7 @@ nodeBgColor.addEventListener('keyup', function(event) {
             document.body.style.background = document.getElementById('background-colortxt').value;
         }
     }
+    localStorage.setItem('backgroundColor', document.getElementById('background-colortxt').value);
 });
 
 let nodeTypeFont = document.querySelector('#font-family-type');
@@ -20,6 +21,7 @@ nodeTypeFont.addEventListener('keyup', function(event) {
             document.body.style.fontFamily = document.getElementById('font-family-type').value;
         }
     }
+    localStorage.setItem('fontFamily', document.getElementById('font-family-type').value);
 });
 
 let nodeTxtColor= document.querySelector('#color-text');
@@ -32,6 +34,7 @@ nodeTxtColor.addEventListener('keyup', function(event) {
             document.body.style.color = document.getElementById('color-text').value;
         }
     }
+    localStorage.setItem('color', document.getElementById('color-text').value);
 });
 
 let nodeFontSize= document.querySelector('#font-size');
@@ -44,6 +47,7 @@ nodeFontSize.addEventListener('keyup', function(event) {
             document.body.style.fontSize = document.getElementById('font-size').value + 'px';
         }
     }
+    localStorage.setItem('fontSize', document.getElementById('font-size').value + 'px');
 });
 
 let nodeLineHeight= document.querySelector('#line-height');
@@ -56,7 +60,14 @@ nodeLineHeight.addEventListener('keyup', function(event) {
             document.body.style.lineHeight = document.getElementById('line-height').value;
         }
     }
+    localStorage.setItem('lineHeight', document.getElementById('line-height').value);
 });
+
+document.body.style.background = localStorage.backgroundColor;
+document.body.style.fontFamily = localStorage.fontFamily;
+document.body.style.color = localStorage.color;
+document.body.style.fontSize = localStorage.fontSize;
+document.body.style.lineHeight = localStorage.lineHeight ;
 
 let bttnReset = document.getElementById('btn-reset');
 bttnReset.addEventListener('click', function (){
@@ -65,4 +76,7 @@ bttnReset.addEventListener('click', function (){
     document.body.style.color = '';
     document.body.style.fontSize = '';
     document.body.style.lineHeight = '';
-})
+    localStorage.clear();
+});
+
+
