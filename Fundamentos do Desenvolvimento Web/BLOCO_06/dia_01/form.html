@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <h1>Formulário de cadastro de Currículo</h1>
+    <form method="GET">  
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label for="nome-completo">Nome Completo:
+                <input type="text" name="nome" id="nome-completo" maxlength="40" placeholder="Digite seu nome" required><br><br>
+            </label>
+            <label for="input-email">E-mail:
+                <input type="email" name="e-mail" id="input-email" maxlength="50" placeholder="Digite seu e-mail" required><br><br>
+            </label>
+            <label for="input-cpf">CPF:
+                <input type="text" name="cpf" id="input-cpf" maxlength="11" placeholder="Ex. 000.000.000-00" required><br><br>
+            </label>
+            <label for="input-endereco">Endereço:
+                <input type="text" name="endereco" id="input-endereco" maxlength="200" placeholder="Digite seu endereço" required>
+            </label>
+            <br><br>
+            <label for="input-cidade">Cidade:
+                <input type="text" name="cidade" id="input-cidade" maxlength="28" placeholder="Digite sua cidade" required>
+            </label>
+            <br><br>
+            <label for="input-estado">Estado:
+                <select name="estado" id="input-estado"></select>
+            </label>
+            <br><br>
+            <label for="moradia-1">
+                <input type="radio" name="moradia" id="moradia-1" value="casa" checked>Casa
+            </label>
+            <label for="moradia-2">
+                <input type="radio" name="moradia" id="moradia-2" value="apartamento">Apartamento
+            </label>
+        </fieldset>
+        <br><br>       
+        <fieldset>
+            <legend>Experiência Profissional</legend>
+            <p>Resumo do Currículo:</p>
+            <textarea name="exper" id="textarea-1" maxlength="1000" cols="30" rows="5" required></textarea><br><br>
+            <label for="input-cargo">Cargo:
+                <input type="text" name="cargo" id="input-cargo" maxlength="40" required><br><br>
+            </label>
+            <label for="input-descr">Descrição do Cargo:
+                <input type="text" name="descrcargo" id="input-descr" maxlength="500" required><br><br>
+            </label>
+            <label for="input-data">Data de início:
+                <input type="date" name="data" id="input-data" placeholder="dd-mm-yyyy" value="" min="1997-01-01" max="2030-12-31" required> 
+            </label>        
+        </fieldset>
+    </form><br>
+    <div>
+        <button id="criar-cv">Criar CV</button>
+        <button id="limpar">Limpar dados</button>
+    </div><br><br>
+    <div id="cv-montado"></div>
+    <script src="script.js"></script>     
+</body>
+</html>
