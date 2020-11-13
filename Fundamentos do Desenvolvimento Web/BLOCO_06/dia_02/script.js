@@ -59,3 +59,8 @@ document.querySelector('#criar-cv').addEventListener('click', function (e){
     document.querySelector('#cv-montado').appendChild(pInitialDate);
 });
 
+document.querySelector('#limpar').addEventListener('click', function() {
+    while(document.querySelector('#cv-montado').firstChild) {
+        document.querySelector('#cv-montado').removeChild(document.querySelector('#cv-montado').firstChild);
+    }
+});
