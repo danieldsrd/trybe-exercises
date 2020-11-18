@@ -29,18 +29,27 @@ figure {
     }
 }
 
-@media (min-width: 1024px) and (max-width: 1300px) {
+@media (min-width: 767px) and (max-width: 1300px) {
     body {
         background: red;
         margin: 50px 60px;
         font-size: large;
     }
-    .imagens {        
+    .imagens { 
+        width: 100%;       
         display: flex;        
-        flex-wrap: wrap;   
-        justify-content: space-between;        
+        flex-wrap: wrap;
+    }
+    .imagens img {       
+        padding:20px;          
+        background-clip: content-box;
+        background-size: cover;
+        background-position: center;           
+    }
+    .imagens img.tamanho {
+        flex-basis: 50%;
     }    
-}
+    
 
 @media (min-width: 1301px) {
     body {
