@@ -16,8 +16,38 @@ figure {
     margin: 0;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     body {
-        font-size: x-large; 
+        font-size: x-large;
+        margin: 40px 30px; 
     }
+    h1 {
+        font-size: xx-large;
+    }
+    figure {
+        margin-bottom: 60px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1300px) {
+    body {
+        background: red;
+        margin: 50px 60px;
+        font-size: large;
+    }
+    .imagens {        
+        display: flex;        
+        flex-wrap: wrap;   
+        justify-content: space-between;        
+    }    
+}
+
+@media (min-width: 1301px) {
+    body {
+        background: blue;
+        margin: 80px 120px;
+        font-size: 80px;
+        max-width: 1400xp;
+    }
+    
 }
