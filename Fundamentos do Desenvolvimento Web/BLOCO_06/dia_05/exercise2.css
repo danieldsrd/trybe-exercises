@@ -1,0 +1,42 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+@media only screen and (max-width:375px) {
+    body {
+        margin: 20px 27px;
+        font-size: 18px;
+        background-color: black;
+        color: white;
+    }
+      
+    header p {
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    nav {
+        margin-left: 6px;
+    }
+    nav ul {
+        display: flex;        
+        justify-content: space-between;
+        padding: 0px;
+        list-style-type: none;
+
+    }
+    .aside-one ul {
+        list-style-type: none;
+        padding-left: 10px;
+    }
+    .aside-two ul {
+        list-style-type: none;
+        padding-left: 10px;
+    }
+    .main-content p {
+        text-align: justify;
+    }
+}
