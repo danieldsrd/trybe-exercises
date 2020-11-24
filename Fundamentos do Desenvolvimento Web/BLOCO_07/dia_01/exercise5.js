@@ -7,8 +7,7 @@ document.querySelector('button').addEventListener('click', () => {
   } else {
     clickCount = parseInt(localStorage.getItem('clickCount'));
   }  
-  let newValue = clickCount + 1;
-  console.log(newValue);
+  let newValue = clickCount + 1;  
   localStorage.setItem('clickCount', newValue);
   document.querySelector('.count').innerHTML = `Voce clickou ${newValue} no botão`;
 });
