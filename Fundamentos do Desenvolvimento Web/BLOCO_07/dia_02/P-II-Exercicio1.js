@@ -33,12 +33,12 @@ const keysList = (object) => {
 
 keysList(lesson2);
 
-const keysLenght = (object) => {
+const keysLength = (object) => {
   const arrayOfKeys = Object.keys(object);  
   console.log(arrayOfKeys.length);
 }
 
-keysLenght(lesson2);
+keysLength(lesson2);
 
 const valuesList = (object) => {
   const arrayOfValues = Object.values(object);  
@@ -53,7 +53,10 @@ const allLessons = Object.assign({}, {lesson1: lesson1, lesson2: lesson2, lesson
 console.log(allLessons);
 
 const sumStudents = (array) => {
-  let sum = array.lesson1.numeroEstudantes + array.lesson2.numeroEstudantes + array.lesson3.numeroEstudantes;
+  let sum = 0;
+  for (let index = 0; index < Object.keys(allLessons).length; index +=1) {
+    sum = sum + Object.values(allLessons)[index].numeroEstudantes;    
+  } 
   console.log(sum);
 }
 
@@ -85,41 +88,31 @@ verifyPair(lesson3, 'materia', 'Maria Clara');
 
 const countStudents = (array) => {
   let sum = 0;
-  if (array.lesson1.materia === 'Matemática') {
-    sum = sum + array.lesson1.numeroEstudantes;
-  }
-  if (array.lesson2.materia === 'Matemática') {
-    sum = sum + array.lesson2.numeroEstudantes;
-  }
-  if (array.lesson3.materia === 'Matemática') {
-    sum = sum + array.lesson3.numeroEstudantes;
-  }
+  for (let index = 0; index < Object.keys(allLessons).length; index +=1) {
+    if (Object.values(allLessons)[index].materia === 'Matemática') {
+      sum = sum + Object.values(allLessons)[index].numeroEstudantes;
+    }
+  }  
   console.log(sum);
 }
 
 countStudents(allLessons);
 
-const createReport = (array, teacher) => {
+const createReport2 = (array, teacher) => {
   let arrayLessons = [];
   let sumStudents = 0;
-  if (array.lesson1.professor === teacher) {
-    sumStudents = sumStudents + array.lesson1.numeroEstudantes;
-    arrayLessons.push(array.lesson1.materia);
-  }
-  if (array.lesson2.professor === teacher) {
-    sumStudents = sumStudents + array.lesson2.numeroEstudantes;
-    arrayLessons.push(array.lesson2.materia);
-  }
-  if (array.lesson3.professor === teacher) {
-    sumStudents = sumStudents + array.lesson3.numeroEstudantes;
-    arrayLessons.push(array.lesson3.materia);
+  for (let index = 0; index < Object.keys(allLessons).length; index +=1) {
+    if (Object.values(allLessons)[index].professor === teacher) {
+      sumStudents = sumStudents + Object.values(allLessons)[index].numeroEstudantes;
+      arrayLessons.push(Object.values(allLessons)[index].materia);
+    }      
   }
   let newObject = {
     professor: teacher,
     aulas: arrayLessons,
     estudantes: sumStudents,
-  };
+  };  
   console.log(newObject);
 }
 
-createReport(allLessons, 'Maria Clara');
+createReport2(allLessons, 'Maria Clara');
