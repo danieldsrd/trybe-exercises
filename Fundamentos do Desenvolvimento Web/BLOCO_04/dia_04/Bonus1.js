@@ -11,7 +11,7 @@ function sumRoman(value) {
     value = value.toUpperCase();     
     let sum = 0; 
     let result = 0;
-    let i = 0;    
+    let i = 0;
         for (i = 0; i < value.length; i++) {
             result = romanNumeral[value[i]];        
             if ((i+1) == value.length) {
@@ -24,8 +24,8 @@ function sumRoman(value) {
                 sum = sum - result;
             }
         }
-    return (sum);   
+        return (sum);   
     
 }
   
-console.log(sumRoman('MLXXXVIII'));
+console.log(sumRoman('VII'));
