@@ -107,7 +107,7 @@ const createReport2 = (array, teacher) => {
       arrayLessons.push(Object.values(allLessons)[index].materia);
     }      
   }
-  let newObject = {
+  const newObject = {
     professor: teacher,
     aulas: arrayLessons,
     estudantes: sumStudents,
