@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Formulário de cadastro de Currículo</h1>
+    </div>    
+    <form method="GET">        
+            <fieldset class="border p-3">
+                <legend class="w-auto">Dados Pessoais</legend>
+                <div class="form-group">
+                    <label for="nome-completo">Nome Completo:</label>
+                        <input type="text" class="form-control" name="nome" id="nome-completo" maxlength="40" placeholder="Digite seu nome" required>                    
+                </div>
+                <div class="form-group">
+                <label for="input-email">E-mail:</label>
+                    <input type="email" class="form-control" name="e-mail" id="input-email" maxlength="50" placeholder="Digite seu e-mail" required>                
+                </div>  
+                <div class="form-group">
+                <label for="input-cpf">CPF:</label>
+                    <input type="text" class="form-control" name="cpf" id="input-cpf" maxlength="11" placeholder="Ex. 000.000.000-00" required>                
+                </div>  
+                <div class="form-group">
+                <label for="input-endereco">Endereço:</label>
+                    <input type="text" class="form-control" name="endereco" id="input-endereco" maxlength="200" placeholder="Digite seu endereço" required>                
+                </div>
+                <div class="form-group">
+                <label for="input-cidade">Cidade:</label>
+                    <input type="text" class="form-control" name="cidade" id="input-cidade" maxlength="28" placeholder="Digite sua cidade" required>                
+                </div>
+                <div class="form-group">             
+                    <label for="input-estado">Estado:</label>
+                         <select class="form-control" name="estado" id="input-estado"></select> 
+                </div>
+                <div class="form-group">                  
+                    <div class="radio">
+                        <label class="radio-inline" for="moradia-1">
+                            <input type="radio" name="moradia" id="moradia-1" value="Casa" checked>Casa
+                        </label>
+                        <label class="radio-inline" for="moradia-2">
+                            <input type="radio" name="moradia" id="moradia-2" value="Apartamento">Apartamento
+                        </label>
+                    </div>
+                </div>
+            </fieldset>                   
+            <fieldset class="border p-3">
+                <legend class="w-auto">Experiência Profissional</legend>
+                <p>Resumo do Currículo:</p>
+                <div class="form-group"> 
+                    <textarea class="form-control" name="exper" id="textarea-1" maxlength="1000" cols="30" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="input-cargo">Cargo:</label>
+                    <input type="text" class="form-control" name="cargo" id="input-cargo" maxlength="40" required> 
+                </div>
+                <div class="form-group">
+                    <label for="input-descr">Descrição do Cargo:</label>
+                    <input type="text" class="form-control" name="descrcargo" id="input-descr" maxlength="500" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-data">Data de início:</label>
+                    <input type="date" class="form-control" name="data" id="input-data" placeholder="dd-mm-yyyy" value="" min="1997-01-01" max="2030-12-31" required>            
+                </div>         
+            </fieldset>
+            <div class="form-group button-group">
+                <button class="btn btn-success" id="criar-cv">Criar CV</button>
+                <button type="reset" class="btn btn-danger">Limpar dados</button>
+                <button class="btn btn-danger" id="limpar">Apagar CV</button>
+            </div>
+       
+    </form>   
+    <div id="cv-montado" class="cvmontado bg-primary"></div>
+    <script src="script.js"></script>     
+</body>
+</html>
