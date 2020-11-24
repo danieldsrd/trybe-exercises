@@ -1,0 +1,62 @@
+body {
+
+}
+h1 {
+
+}
+h2 {
+
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: x-large;
+        margin: 40px 30px; 
+    }
+    h1 {
+        font-size: xx-large;
+    }
+    figure {
+        margin-bottom: 60px;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1300px) {
+    body {
+        background: red;
+        margin: 50px 60px;
+        font-size: large;
+    }
+    .imagens { 
+        width: 100%;       
+        display: flex;        
+        flex-wrap: wrap;
+    }
+    .imagens img {       
+        padding:20px;          
+        background-clip: content-box;
+        background-size: cover;
+        background-position: center;           
+    }
+    .imagens img.tamanho {
+        flex-basis: 50%;
+    }    
+    
+
+@media (min-width: 1301px) {
+    body {
+        background: blue;
+        margin: 80px 120px;
+        font-size: 80px;
+        max-width: 1400xp;
+    }
+    
+}
