@@ -1,7 +1,6 @@
 const assert = require('assert');
 const factorial = (n) => n===0 || n===1 ? 1 : n * factorial(n-1);
 
-
 const in1 = 5;
 const exp1 = 120;
 
@@ -23,6 +22,7 @@ const out3 = factorial(in3);
 const out4 = factorial(in4);
 const out5 = factorial(in5);
 
+assert.strictEqual(typeof factorial, 'function');
 assert.strictEqual(out1, exp1);
 assert.strictEqual(out2, exp2);
 assert.strictEqual(out3, exp3);
