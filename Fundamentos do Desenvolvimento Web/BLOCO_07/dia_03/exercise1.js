@@ -8,9 +8,12 @@ function sum(a, b) {
   return a + b;
 }
 
-const expected = sum(4, 5);
-const exepected2 = sum (0, 0);
-const exepected3 = sum(4, '5')
-assert.strictEqual(expected, 9, 'Soma de 4 + 5 = 9');
-assert.strictEqual(exepected2, 0, 'Soma de 0 + 0 = 0');
-assert.strictEqual(exepected3, 9, 'error');
+assert.strictEqual(typeof sum, 'function');
+assert.strictEqual(sum(4, 5), 9, 'Soma de 4 + 5 = 9');
+assert.strictEqual(sum (0, 0), 0, 'Soma de 0 + 0 = 0');
+assert.throws(() => {
+  sum(4, '5');
+});
+assert.throws(() => {
+  sum(4, '5');
+}, /^Error: parameters must be numbers$/);
