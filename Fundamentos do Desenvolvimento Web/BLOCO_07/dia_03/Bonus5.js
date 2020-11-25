@@ -2,7 +2,7 @@ function PasswordVerifier (password) {
   const regex = /[0-9]/
   const upper = /[A-Z]/
   const lower = /[a-z]/
-  if (password === null) {
+  if (password == null) {
     throw new Error('Password should not be null');
   }
   if (password.length <= 8) {
@@ -25,10 +25,10 @@ console.log(PasswordVerifier('DanielRodrigues1'));
 const assert = require('assert');
 
 assert.throws(() => {
-  PasswordVerifier('AHhausahuAHAhsdausdh');
+  PasswordVerifier('Aaaaaaaaaaaaaa');
 }, /^Error: Password should have one number at least$/);
 assert.throws(() => {
-  PasswordVerifier('aaaaa');
+  PasswordVerifier('aaa');
 }, /^Error: Password should be longer than 8 characters$/);
 assert.throws(() => {
   PasswordVerifier('aaaaaaaaa');
@@ -36,3 +36,6 @@ assert.throws(() => {
 assert.throws(() => {
   PasswordVerifier('AAAAAAAAAAA');
 }, /^Error: Password should have one lowercase letter at least$/);
+assert.throws(() => {
+  PasswordVerifier();
+}, /^Error: Password should not be null$/);
