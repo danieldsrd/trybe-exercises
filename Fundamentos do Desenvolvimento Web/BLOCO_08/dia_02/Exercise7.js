@@ -70,12 +70,11 @@ function authorWith3DotsOnName() {
   // book.author.name.split(' ').filter(letter => letter.endsWith('.')).length === 3).name;
   // return result;
   let nameAuthor = [];  
-  const result = books.forEach((book, index) => nameAuthor[index] = book.author.name.split(' '));
-  const nameNew = nameAuthor.filter(letter => letter[0].endsWith('.') && letter[1].endsWith('.') && letter[2].endsWith('.'));
+  const result = books.forEach((book, index) => nameAuthor.push(book.author.name.split(' ')));  
+  const nameNew = nameAuthor.filter(letter => letter[0].endsWith('.') && letter[1].endsWith('.') && letter[2].endsWith('.'));  
   const nameBook = books.find(book => book.author.name === nameNew[0].join(' '));
   return nameBook.name;
 }
 
-console.log(authorWith3DotsOnName());
 
 assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
