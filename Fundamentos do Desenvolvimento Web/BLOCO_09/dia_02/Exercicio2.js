@@ -12,7 +12,6 @@ const division = (sum) => {
   return newArray;
 }
 
-
 const promise = new Promise((resolve, reject) => {
   const sum = randomArray();
   const array = division(sum);     
