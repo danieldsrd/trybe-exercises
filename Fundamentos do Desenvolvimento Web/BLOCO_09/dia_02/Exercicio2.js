@@ -17,7 +17,7 @@ const promise = new Promise((resolve, reject) => {
   const sum = randomArray();
   const array = division(sum);     
   if (sum > 8000) {
-    return reject();
+    reject();
   } else {
     resolve(array);    
   }  
