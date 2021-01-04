@@ -162,7 +162,7 @@ function techList(arrayTec, name) {
   return (arrayinfo2)    
 }
 
-// console.log(techList(["React"], "Lucas")) //
+console.log(techList(["React"], "Lucas"))
 
 
 // Desafio 11
@@ -237,4 +237,6 @@ function hydrate(phrase) {
 module.exports = {
   encode,
   decode,
+  techList,
+  hydrate,
 }
