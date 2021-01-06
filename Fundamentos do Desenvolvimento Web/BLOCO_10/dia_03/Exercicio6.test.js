@@ -3,7 +3,7 @@ const api = require('./Exercicio6');
 
 describe('Testando requisição da API', () => {
   const apiURL = jest.spyOn(api, 'fetchURL');
-  afterEach(apiURL.mockReset);
+  afterEach(apiURL.mockRestore);
 
   test('Testando requisicao em caso de resolve', async () => {
     apiURL.mockResolvedValue('request sucess');
