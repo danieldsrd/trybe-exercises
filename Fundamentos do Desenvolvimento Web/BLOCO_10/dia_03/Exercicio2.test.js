@@ -1,7 +1,6 @@
-const { expect } = require('@jest/globals');
-const fun = require('./Exercicio1');
+const fun = require('./Exercicio2');
 
-test('Testando função numero random', () => {
+test('Testando funcão e fazendo implementação para que seja uma divisão', () => {
   fun.randomNumber = jest.fn().mockImplementation((a, b) => a / b);
   
   expect(fun.randomNumber(4, 2)).toBe(2);
