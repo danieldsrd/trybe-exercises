@@ -10,7 +10,7 @@ class App extends React.Component {
 
     return (
       <main className="pokemon-card">
-        <Pokedex pokemons={pokemons} />
+        <Pokedex pokemontype={pokemons} />
       </main>
     );
   }

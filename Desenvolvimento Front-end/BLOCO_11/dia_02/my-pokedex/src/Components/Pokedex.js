@@ -3,11 +3,11 @@ import Pokemon from './Pokemon';
 
 class PokemonList extends React.Component {
   render() {
-    const pokemons = this.props.pokemons;
+    const pokemons = this.props.pokemontype;
     
     return (
       <section>
-        {pokemons.map(pokemon => <Pokemon pokemon={pokemon} />)}
+        {pokemons.map(pokemon => <Pokemon pokemoncard={pokemon} />)}
       </section>
     );
   }
