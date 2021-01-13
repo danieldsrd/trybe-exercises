@@ -19,7 +19,13 @@ class Pokemon extends React.Component {
 }
 
 Pokemon.propTypes = {
-  type: PropTypes.string
+  type: PropTypes.string,
+  name: PropTypes.string,
+  averageWeight: PropTypes.shape({
+    value: PropTypes.number,
+    measurementUnit: PropTypes.number,
+  }),
+  image: PropTypes.string,
 }
 
 export default Pokemon;
